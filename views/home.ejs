@@ -1,6 +1,9 @@
+<!--Including same header and footer in all views-->
 <%- include("partials/header.ejs") %> 
 
-<h1>Home sweet home</h1>
-<p>Hi!: <%= startingContent %> </p>
+<h1>Home</h1>
+
+<!-- Using ejs to display content from app.js -->
+<p><%= startingContent %> </p>
 
 <%- include("partials/footer.ejs") %> 
