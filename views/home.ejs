@@ -4,6 +4,15 @@
 <h1>Home</h1>
 
 <!-- Using ejs to display content from app.js -->
-<p><%= startingContent %> </p>
+<p><%= startingContent %> </p>,
+<% console.log(posts); %>
+
+<%for (let i = 0; i < posts.length; i++) { %>
+<%    console.log(posts[i].title) %>
+    
+<%   }; %>
 
 <%- include("partials/footer.ejs") %> 
+
+
+<!--For loop that loops through the array and console logs every title-->
