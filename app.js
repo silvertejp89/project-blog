@@ -18,23 +18,22 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
-//Gets for views
+//Routes for the views
 app.get("/", function (req, res) {
   res.render("home", {
     startingContent : homeStartingContent
+    //startingContent: The variable name that is going to be passed over.
+    //homeStartingContent: The data that is going to be passed over. 
   });
 })
 
+//Node and express formatting: Same name for key and value (aboutContent)
 app.get("/about", function(req, res) {
-  res.render("about", {
-    aboutContent
-  })
+  res.render("about", {aboutContent:aboutContent})
 })
 
 app.get("/contact", function(req, res) {
-  res.render("contact", {
-    contactContent
-  })
+  res.render("contact", {contactContent:contactContent})
 })
 
 
