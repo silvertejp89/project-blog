@@ -10,9 +10,10 @@
 
 <h1><%=post.title%></h1>
 
-<% let result = post.content.substring(0, 100) + " ..."; %> 
-
-<p><%=result%></p>
+<% let result = post.content.substring(0, 100) + " ..."; %>
+<p><%=result%> 
+    <a href="/posts/<%=post.title%>">Read more</a>
+</p>
 
 <% }) %> 
 
